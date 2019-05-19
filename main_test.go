@@ -21,6 +21,7 @@ func TestPancakes_SortStack(t *testing.T) {
 		{name: "flips a stack with one face up pancake", fields: fields{Stack: "--+-"}, want: &Pancakes{Stack: "++++", Count: 3}},
 		{name: "flips a stack with one face down pancake", fields: fields{Stack: "++-+"}, want: &Pancakes{Stack: "++++", Count: 2}},
 		{name: "flips a mixed stack", fields: fields{Stack: "++-+++----+--+-+++----+++-+-+++-"}, want: &Pancakes{Stack: "++++++++++++++++++++++++++++++++", Count: 16}},
+		{name: "won't flip more than 100 times", fields: fields{Stack: "-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+"}, want: &Pancakes{Stack: "-----------------------------------------------------------------------------------------------------+-+-+-+-+-+-+-+-+-+", Count: 100}},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {

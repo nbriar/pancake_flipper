@@ -40,12 +40,11 @@ func (p *Pancakes) SortStack() *Pancakes {
 		return p
 	}
 
-	c := 0
 	for fdi > -1 {
-		// Let's limit the number of times we can flip the stack. We don't want to get carried away.
-		c++
-		if c > 100 {
-			panic("Something really went wrong and your function ran away! Better go catch it.")
+		// Don't flip the stack more than 100 times
+		if p.Count > 99 {
+			fmt.Println("We've flipped the stack more than 100 times. They're mush now. Please don't serve them!")
+			return p
 		}
 
 		// Take all the face down pancakes at the start of the stack and flip them
