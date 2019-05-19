@@ -60,7 +60,7 @@ func (p *Pancakes) SortStack() *Pancakes {
 			return p.SortStack()
 		}
 
-		// Take all the face down pancakes at the start of the stack and flip them
+		// Take all the face up pancakes at the start of the stack and flip them
 		if fdi > fui {
 			fus := p.Stack[:fdi]
 			flipped := flipstack(fus)
