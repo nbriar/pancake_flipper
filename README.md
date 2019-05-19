@@ -1,12 +1,19 @@
 # Pancake Flipper
 
-The Pancake Flipper takes a string made up of `+`s or `-`s which represent faceup (`+`) and face down (`-`) pancakes in a stack.
+The Pancake Flipper takes a string made up of `+` and `-` which represent faceup (`+`) and face down (`-`) pancakes in a stack.
 
 Example: `---+--+-+++++--`
 
 ## Use
 
 To flip a stack run `make run stack=<stack_string>` from the command line
+
+Example:
+
+```
+make run stack=+++----+--+++----++--
+```
+
 
 ## Other Commands
 
